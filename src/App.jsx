@@ -17,7 +17,7 @@ export default function App() {
   const handleSubmit = async () => {
     try {
       const parsedInput = JSON.parse(jsonInput);
-      const res = await axios.post("http://localhost:3000/bfhl", parsedInput);
+      const res = await axios.post("https://bajaj-backend-eta-eight.vercel.app/", parsedInput);
       setResponse(res.data);
     } catch (error) {
       console.error("Invalid JSON or API error", error);
